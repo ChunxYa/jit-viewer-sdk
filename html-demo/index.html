@@ -384,6 +384,98 @@
     .demo-links button:hover {
       background: #f8fafc;
     }
+
+    .video-config-panel {
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+    }
+
+    .video-config-panel__title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .video-config-panel__badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 8px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 600;
+      background: #e2e8f0;
+      color: var(--text-secondary);
+    }
+
+    .video-config-panel__badge.is-active {
+      background: #dcfce7;
+      color: #166534;
+    }
+
+    .video-config-panel__desc {
+      margin: 0 0 12px;
+      font-size: 12px;
+      line-height: 1.6;
+      color: var(--text-secondary);
+    }
+
+    .video-config-panel__group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .video-config-toggle {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: #f8fafc;
+      cursor: pointer;
+      transition: border-color 0.2s ease, background 0.2s ease;
+    }
+
+    .video-config-toggle:hover {
+      border-color: #cbd5e1;
+      background: #f1f5f9;
+    }
+
+    .video-config-toggle input {
+      margin-top: 2px;
+    }
+
+    .video-config-toggle__content {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .video-config-toggle__label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .video-config-toggle__hint {
+      font-size: 12px;
+      line-height: 1.5;
+      color: var(--text-secondary);
+    }
+
+    .video-config-panel__status {
+      margin-top: 12px;
+      padding: 10px 12px;
+      border-radius: 10px;
+      background: #eff6ff;
+      color: #1d4ed8;
+      font-size: 12px;
+      line-height: 1.6;
+    }
     
     .demo-preview {
       background: var(--card-bg);
@@ -837,6 +929,54 @@ const defaultItems = [
             <button onclick="loadDemo('excel')">📊 Excel 示例</button>
             <button onclick="loadDemo('cad')">📐 CAD DXF 示例</button>
           </div>
+
+          <div class="video-config-panel" id="videoConfigPanel">
+            <div class="video-config-panel__title">
+              <h3 style="margin: 0;">视频调试面板</h3>
+              <span class="video-config-panel__badge" id="videoConfigBadge">等待视频</span>
+            </div>
+            <p class="video-config-panel__desc">
+              这些开关只对视频文件生效。切换后会自动重新创建当前预览，方便你验证“原生控件 / 自定义控件 / 工具栏视频控件”的组合效果。
+            </p>
+
+            <div class="video-config-panel__group">
+              <label class="video-config-toggle" id="toggleNativeControlsWrap">
+                <input type="checkbox" id="toggleNativeControls">
+                <span class="video-config-toggle__content">
+                  <span class="video-config-toggle__label">显示原生视频控件</span>
+                  <span class="video-config-toggle__hint">浏览器自带的播放条、拖动条和菜单。</span>
+                </span>
+              </label>
+
+              <label class="video-config-toggle" id="toggleCustomControlsWrap">
+                <input type="checkbox" id="toggleCustomControls" checked>
+                <span class="video-config-toggle__content">
+                  <span class="video-config-toggle__label">显示 SDK 自定义控件</span>
+                  <span class="video-config-toggle__hint">画面内的播放、进度、静音、倍速等控件。</span>
+                </span>
+              </label>
+
+              <label class="video-config-toggle" id="toggleToolbarVideoControlsWrap">
+                <input type="checkbox" id="toggleToolbarVideoControls" checked>
+                <span class="video-config-toggle__content">
+                  <span class="video-config-toggle__label">启用工具栏视频控件</span>
+                  <span class="video-config-toggle__hint">开启后，视频控件优先显示在底部工具栏，画面内自定义控件会隐藏。</span>
+                </span>
+              </label>
+
+              <label class="video-config-toggle" id="toggleDisableSeekWrap">
+                <input type="checkbox" id="toggleDisableSeek">
+                <span class="video-config-toggle__content">
+                  <span class="video-config-toggle__label">禁止拖动进度条</span>
+                  <span class="video-config-toggle__hint">用于验证禁拖动和续播场景，SDK 会阻止用户跳播。</span>
+                </span>
+              </label>
+            </div>
+
+            <div class="video-config-panel__status" id="videoConfigStatus">
+              当前没有视频文件。你现在修改的开关会在下次打开视频文件时生效。
+            </div>
+          </div>
           
           <div id="fileInfo" style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border); display: none;">
             <h3>文件信息</h3>
@@ -894,13 +1034,17 @@ const defaultItems = [
 
     const sdkAssetCandidates = {
       css: [
+        '../../packages/core/dist/style.css',
+        '/packages/core/dist/style.css',
         '../../packages/core/dist/iife/jit-viewer.min.css',
         '/packages/core/dist/iife/jit-viewer.min.css',
         'https://unpkg.com/jit-viewer/dist/iife/jit-viewer.min.css'
       ],
-      js: [
-        '../../packages/core/dist/iife/jit-viewer.min.js',
-        '/packages/core/dist/iife/jit-viewer.min.js',
+      module: [
+        '../../packages/core/dist/index.js',
+        '/packages/core/dist/index.js'
+      ],
+      script: [
         'https://unpkg.com/jit-viewer/dist/iife/jit-viewer.min.js'
       ]
     };
@@ -963,6 +1107,16 @@ const defaultItems = [
       });
     }
 
+    function normalizeSdkModule(moduleValue) {
+      const sdk = moduleValue?.JitViewer || moduleValue?.default || moduleValue;
+      if (sdk?.createViewer) {
+        globalThis.JitViewer = sdk;
+        return sdk;
+      }
+
+      throw new Error('ESM SDK loaded but createViewer not found');
+    }
+
     async function loadFirstAvailableAsset(type) {
       const candidates = sdkAssetCandidates[type];
       let lastError = null;
@@ -984,17 +1138,39 @@ const defaultItems = [
       throw lastError || new Error(`No available ${type} asset`);
     }
 
+    async function loadFirstAvailableModule() {
+      let lastError = null;
+
+      for (const candidate of sdkAssetCandidates.module) {
+        try {
+          const moduleValue = await import(candidate);
+          return normalizeSdkModule(moduleValue);
+        } catch (error) {
+          lastError = error;
+          console.warn('[full-demo] module load failed:', candidate, error);
+        }
+      }
+
+      throw lastError || new Error('No available module asset');
+    }
+
     async function ensureSdkLoaded() {
       if (sdkLoaded && getSdkGlobal()) {
         return getSdkGlobal();
       }
 
-      await Promise.all([
-        loadFirstAvailableAsset('css'),
-        loadFirstAvailableAsset('js')
-      ]);
+      await loadFirstAvailableAsset('css');
 
-      const sdk = getSdkGlobal();
+      let sdk = null;
+
+      try {
+        sdk = await loadFirstAvailableModule();
+      } catch (moduleError) {
+        console.warn('[full-demo] falling back to script SDK loader', moduleError);
+        await loadFirstAvailableAsset('script');
+        sdk = getSdkGlobal();
+      }
+
       if (!sdk) {
         throw new Error('JitViewer SDK 未成功加载');
       }
@@ -1010,8 +1186,104 @@ const defaultItems = [
       excel: 'https://go.microsoft.com/fwlink/?LinkID=521962',
       cad: './samples/cad-floorplan.dxf'
     };
+
+    const videoExtensions = new Set(['mp4', 'webm', 'ogg', 'ogv', 'mov']);
+    const currentDemoFile = {
+      source: null,
+      filename: '',
+      type: ''
+    };
+    const demoVideoConfig = {
+      nativeControls: false,
+      customControls: true,
+      toolbarVideoControls: true,
+      disableSeek: false
+    };
     
     let currentViewer = null;
+
+    function getFilenameExtension(filename) {
+      if (!filename || typeof filename !== 'string' || !filename.includes('.')) {
+        return '';
+      }
+
+      return filename.split('.').pop().split('?')[0].split('#')[0].toLowerCase();
+    }
+
+    function isVideoType(type, filename) {
+      const normalizedType = (type || '').toLowerCase();
+      const extension = getFilenameExtension(filename);
+
+      if (normalizedType.startsWith('video/')) {
+        return true;
+      }
+
+      return normalizedType === 'video' || videoExtensions.has(normalizedType) || videoExtensions.has(extension);
+    }
+
+    function getVideoConfigElements() {
+      return {
+        badge: document.getElementById('videoConfigBadge'),
+        status: document.getElementById('videoConfigStatus'),
+        toggles: [
+          document.getElementById('toggleNativeControls'),
+          document.getElementById('toggleCustomControls'),
+          document.getElementById('toggleToolbarVideoControls'),
+          document.getElementById('toggleDisableSeek')
+        ],
+        wraps: [
+          document.getElementById('toggleNativeControlsWrap'),
+          document.getElementById('toggleCustomControlsWrap'),
+          document.getElementById('toggleToolbarVideoControlsWrap'),
+          document.getElementById('toggleDisableSeekWrap')
+        ]
+      };
+    }
+
+    function updateVideoConfigPanel() {
+      const { badge, status } = getVideoConfigElements();
+      const isCurrentVideo = isVideoType(currentDemoFile.type, currentDemoFile.filename);
+
+      if (badge) {
+        badge.textContent = isCurrentVideo ? '视频已激活' : '等待视频';
+        badge.classList.toggle('is-active', isCurrentVideo);
+      }
+
+      if (status) {
+        if (!isCurrentVideo) {
+          status.textContent = '当前没有视频文件。你现在调整的开关会在下次打开视频文件时自动生效。';
+          return;
+        }
+
+        const toolbarState = demoVideoConfig.toolbarVideoControls
+          ? '工具栏视频控件已开启，画面内自定义控件会隐藏。'
+          : '工具栏视频控件已关闭，若开启自定义控件则会显示在画面内。';
+        const nativeState = demoVideoConfig.nativeControls
+          ? '原生控件已开启。'
+          : '原生控件已关闭。';
+
+        status.textContent = `${nativeState}${toolbarState}`;
+      }
+    }
+
+    function getViewerToolbarConfig(type, filename) {
+      if (!isVideoType(type, filename)) {
+        return true;
+      }
+
+      if (demoVideoConfig.toolbarVideoControls) {
+        return true;
+      }
+
+      return {
+        position: 'both',
+        items: [
+          { type: 'zoom' },
+          { type: 'fullscreen' },
+          { type: 'download' }
+        ]
+      };
+    }
     
     function showFileInfo(name, type) {
       document.getElementById('fileInfo').style.display = 'block';
@@ -1037,9 +1309,14 @@ const defaultItems = [
       currentViewer = createViewer({
         file: fileSource,
         filename: filename,
-        toolbar: true,
+        toolbar: getViewerToolbarConfig(currentDemoFile.type, filename),
         width: '100%',
         height: '600px',
+        video: isVideoType(currentDemoFile.type, filename) ? {
+          nativeControls: demoVideoConfig.nativeControls,
+          customControls: demoVideoConfig.customControls,
+          disableSeek: demoVideoConfig.disableSeek
+        } : undefined,
         onReady: () => console.log('Viewer ready'),
         onLoad: () => console.log('File loaded'),
         onError: (err) => console.error('Error:', err)
@@ -1053,7 +1330,11 @@ const defaultItems = [
       if (!url) return;
       
       const filename = type === 'cad' ? 'cad-floorplan.dxf' : `示例.${type}`;
+      currentDemoFile.source = url;
+      currentDemoFile.filename = filename;
+      currentDemoFile.type = type;
       showFileInfo(`示例 ${type.toUpperCase()} 文件`, type);
+      updateVideoConfigPanel();
       await initViewer(url, filename);
     }
     
@@ -1065,8 +1346,12 @@ const defaultItems = [
       }
       
       const filename = url.split('/').pop() || 'unknown';
-      const ext = filename.split('.').pop().toLowerCase();
+      const ext = getFilenameExtension(filename);
+      currentDemoFile.source = url;
+      currentDemoFile.filename = filename;
+      currentDemoFile.type = ext;
       showFileInfo(filename, ext);
+      updateVideoConfigPanel();
       
       await initViewer(url, filename);
     }
@@ -1076,10 +1361,46 @@ const defaultItems = [
       const file = e.target.files[0];
       if (!file) return;
       
+      currentDemoFile.source = file;
+      currentDemoFile.filename = file.name;
+      currentDemoFile.type = file.type || getFilenameExtension(file.name);
       showFileInfo(file.name, file.type || file.name.split('.').pop());
+      updateVideoConfigPanel();
       
       await initViewer(file, file.name);
     });
+
+    async function reapplyCurrentViewerWithVideoConfig() {
+      if (!currentDemoFile.source || !isVideoType(currentDemoFile.type, currentDemoFile.filename)) {
+        updateVideoConfigPanel();
+        return;
+      }
+
+      updateVideoConfigPanel();
+      await initViewer(currentDemoFile.source, currentDemoFile.filename);
+    }
+
+    document.getElementById('toggleNativeControls')?.addEventListener('change', async function(event) {
+      demoVideoConfig.nativeControls = event.target.checked;
+      await reapplyCurrentViewerWithVideoConfig();
+    });
+
+    document.getElementById('toggleCustomControls')?.addEventListener('change', async function(event) {
+      demoVideoConfig.customControls = event.target.checked;
+      await reapplyCurrentViewerWithVideoConfig();
+    });
+
+    document.getElementById('toggleToolbarVideoControls')?.addEventListener('change', async function(event) {
+      demoVideoConfig.toolbarVideoControls = event.target.checked;
+      await reapplyCurrentViewerWithVideoConfig();
+    });
+
+    document.getElementById('toggleDisableSeek')?.addEventListener('change', async function(event) {
+      demoVideoConfig.disableSeek = event.target.checked;
+      await reapplyCurrentViewerWithVideoConfig();
+    });
+
+    updateVideoConfigPanel();
     
     // Add spin animation
     const style = document.createElement('style');

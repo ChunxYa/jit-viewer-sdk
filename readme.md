@@ -45,65 +45,97 @@ pnpm add jit-viewer
 
 ```vue
 <template>
-  <Viewer
-    :file="file"
-    theme="light"
-    :toolbar="true"
-    width="100%"
-    height="600px"
-    @ready="onReady"
-    @load="onLoad"
-    @error="onError"
-  />
+  <div ref="containerRef" class="viewer-container"></div>
 </template>
 
-<script setup>
-import { Viewer } from 'jit-viewer'
+<script setup lang="ts">
+import { onMounted, onUnmounted, ref } from 'vue'
+import { createViewer, type ViewerInstance } from 'jit-viewer'
 import 'jit-viewer/style.css'
 
-const file = 'https://example.com/document.pdf'
+const containerRef = ref<HTMLDivElement | null>(null)
+let viewer: ViewerInstance | null = null
 
-function onReady() { console.log('Viewer ready') }
-function onLoad() { console.log('File loaded') }
-function onError(error) { console.error('Error:', error) }
+onMounted(async () => {
+  if (!containerRef.value) {
+    return
+  }
+
+  viewer = createViewer({
+    target: containerRef.value,
+    file: 'https://example.com/document.pdf',
+    filename: 'document.pdf',
+    theme: 'light',
+    toolbar: true,
+    width: '100%',
+    height: 600,
+    onReady: () => console.log('Viewer ready'),
+    onLoad: () => console.log('File loaded'),
+    onError: (error) => console.error('Error:', error)
+  })
+
+  await viewer.mount()
+})
+
+onUnmounted(() => {
+  viewer?.destroy()
+  viewer = null
+})
 </script>
+
+<style scoped>
+.viewer-container {
+  width: 100%;
+  height: 600px;
+}
+</style>
 ```
 
 ### React
 
 ```tsx
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 import { createViewer, type ViewerInstance } from 'jit-viewer'
 import 'jit-viewer/style.css'
 
 function DocumentViewer() {
-  const containerRef = useRef<HTMLDivElement>(null)
-  const [viewer, setViewer] = useState<ViewerInstance | null>(null)
+  const containerRef = useRef<HTMLDivElement | null>(null)
+  const viewerRef = useRef<ViewerInstance | null>(null)
 
   useEffect(() => {
-    if (containerRef.current) {
-      const instance = createViewer({
-        target: containerRef.current,
-        theme: 'light',
-        toolbar: true
-      })
-      instance.mount()
-      setViewer(instance)
+    if (!containerRef.current) {
+      return
     }
-    return () => viewer?.destroy()
+
+    viewerRef.current = createViewer({
+      target: containerRef.current,
+      file: 'https://example.com/document.pdf',
+      filename: 'document.pdf',
+      theme: 'light',
+      toolbar: true,
+      width: '100%',
+      height: 600
+    })
+
+    void viewerRef.current.mount()
+
+    return () => {
+      viewerRef.current?.destroy()
+      viewerRef.current = null
+    }
   }, [])
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0]
-    if (file && viewer) {
-      viewer.setFile(file, file.name)
+    if (file && viewerRef.current) {
+      void viewerRef.current.setFile(file, file.name)
     }
   }
 
   return (
     <div>
       <input type="file" onChange={handleFileChange} />
-      <div ref={containerRef} style={{ width: '100%', height: '600px' }} />
+      <div ref={containerRef} style={{ width: '100%', height: 600 }} />
     </div>
   )
 }

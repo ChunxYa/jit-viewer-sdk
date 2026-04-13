@@ -476,6 +476,256 @@
       font-size: 12px;
       line-height: 1.6;
     }
+
+    .model3d-config-panel {
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+    }
+
+    .model3d-config-panel__title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .model3d-config-panel__badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 8px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 600;
+      background: #e2e8f0;
+      color: var(--text-secondary);
+    }
+
+    .model3d-config-panel__badge.is-active {
+      background: #ede9fe;
+      color: #6d28d9;
+    }
+
+    .model3d-config-panel__desc {
+      margin: 0 0 12px;
+      font-size: 12px;
+      line-height: 1.6;
+      color: var(--text-secondary);
+    }
+
+    .model3d-config-panel__group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .model3d-config-row {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .model3d-config-toggle {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: #faf5ff;
+      cursor: pointer;
+      transition: border-color 0.2s ease, background 0.2s ease;
+    }
+
+    .model3d-config-toggle:hover {
+      border-color: #d8b4fe;
+      background: #f5edff;
+    }
+
+    .model3d-config-toggle input {
+      margin-top: 2px;
+    }
+
+    .model3d-config-toggle__content {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .model3d-config-toggle__label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .model3d-config-toggle__hint {
+      font-size: 12px;
+      line-height: 1.5;
+      color: var(--text-secondary);
+    }
+
+    .model3d-config-select {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: #faf5ff;
+    }
+
+    .model3d-config-select label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .model3d-config-select select {
+      width: 100%;
+      padding: 8px 10px;
+      border: 1px solid #d8b4fe;
+      border-radius: 8px;
+      background: #ffffff;
+      color: var(--text);
+      font-size: 13px;
+    }
+
+    .model3d-config-slider {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: #faf5ff;
+    }
+
+    .model3d-config-slider__top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .model3d-config-slider__top label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .model3d-config-slider__value {
+      font-size: 12px;
+      color: #6d28d9;
+      font-weight: 600;
+    }
+
+    .model3d-config-slider input[type="range"] {
+      width: 100%;
+      accent-color: #7c3aed;
+    }
+
+    .model3d-config-slider__hint {
+      font-size: 12px;
+      line-height: 1.5;
+      color: var(--text-secondary);
+    }
+
+    .model3d-config-actions {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .model3d-config-actions .demo-btn {
+      width: 100%;
+    }
+
+    .model3d-config-state {
+      margin-top: 12px;
+      padding: 12px;
+      border-radius: 12px;
+      background: #faf5ff;
+      border: 1px solid #e9d5ff;
+    }
+
+    .model3d-config-state h4 {
+      margin: 0 0 10px;
+      font-size: 13px;
+      color: #6d28d9;
+    }
+
+    .model3d-preset-panel {
+      margin-top: 12px;
+      padding: 12px;
+      border-radius: 12px;
+      background: #ffffff;
+      border: 1px solid #e9d5ff;
+    }
+
+    .model3d-preset-panel h4 {
+      margin: 0 0 10px;
+      font-size: 13px;
+      color: #6d28d9;
+    }
+
+    .model3d-preset-panel textarea {
+      width: 100%;
+      min-height: 160px;
+      padding: 12px;
+      border: 1px solid #d8b4fe;
+      border-radius: 10px;
+      background: #faf5ff;
+      color: var(--text);
+      font-size: 12px;
+      line-height: 1.6;
+      resize: vertical;
+      font-family: 'Fira Code', 'Consolas', monospace;
+    }
+
+    .model3d-preset-actions {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .model3d-config-metrics {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .model3d-config-metric {
+      padding: 8px 10px;
+      border-radius: 10px;
+      background: #ffffff;
+      border: 1px solid #f3e8ff;
+    }
+
+    .model3d-config-metric span {
+      display: block;
+      font-size: 11px;
+      color: var(--text-secondary);
+    }
+
+    .model3d-config-metric strong {
+      display: block;
+      margin-top: 4px;
+      font-size: 13px;
+      color: var(--text);
+    }
+
+    .model3d-config-panel__status {
+      margin-top: 12px;
+      padding: 10px 12px;
+      border-radius: 10px;
+      background: #f5f3ff;
+      color: #6d28d9;
+      font-size: 12px;
+      line-height: 1.6;
+    }
     
     .demo-preview {
       background: var(--card-bg);
@@ -528,8 +778,8 @@
     <div class="header-content">
       <div class="header-title">
         <h1>JitViewer SDK</h1>
-        <p>基于 Vue3 的跨框架文档预览 SDK，支持 PDF、DOCX、Excel、PPTX、TXT、Markdown 等多种格式</p>
-        <span class="version">v1.0.0</span>
+        <p>跨框架文档预览 SDK，支持 PDF、Office、图片、视频、CAD 与 3D 模型等多种格式</p>
+        <span class="version">v1.4.1</span>
       </div>
       <div class="header-actions">
         <a href="https://jitword.com" target="_blank" class="btn-office">体验在线Office编辑</a>
@@ -564,7 +814,7 @@
               </svg>
             </div>
             <h4>多格式支持</h4>
-            <p>PDF、DOCX、XLSX/XLS、PPTX、TXT、Markdown 一站式预览</p>
+            <p>PDF、DOCX、XLSX/XLS、PPTX、TXT、Markdown、代码文件一站式预览</p>
           </div>
           <div class="feature">
             <div class="feature-icon">
@@ -605,22 +855,25 @@
         <p>直接在 HTML 中引入 SDK：</p>
         <div class="code-block">
           <span class="code-label">html</span>
-          <pre><code class="language-html">&lt;link rel="stylesheet" href="jit-viewer.min.css"&gt;
-&lt;script src="jit-viewer.min.js"&gt;&lt;/script&gt;
+          <pre><code class="language-html">&lt;link rel="stylesheet" href="https://unpkg.com/jit-viewer@1.4.1/dist/iife/jit-viewer.min.css"&gt;
+&lt;script src="https://unpkg.com/jit-viewer@1.4.1/dist/iife/jit-viewer.min.js"&gt;&lt;/script&gt;
 
 &lt;div id="viewer"&gt;&lt;/div&gt;
 
 &lt;script&gt;
-  JitViewer.createViewer({
+  const viewer = JitViewer.createViewer({
+    target: '#viewer',
     file: 'document.pdf',
     toolbar: true
-  }).mount('#viewer');
+  });
+
+  viewer.mount();
 &lt;/script&gt;</code></pre>
         </div>
         <p>或使用 npm 安装：</p>
         <div class="code-block">
           <span class="code-label">bash</span>
-          <pre><code class="language-bash">npm install @jit-viewer/core</code></pre>
+          <pre><code class="language-bash">npm install jit-viewer@1.4.1</code></pre>
         </div>
       </div>
     </section>
@@ -634,13 +887,13 @@
         <div class="code-block">
           <span class="code-label">bash</span>
           <pre><code class="language-bash"># npm
-npm install @jit-viewer/core
+npm install jit-viewer@1.4.1
 
 # yarn
-yarn add @jit-viewer/core
+yarn add jit-viewer@1.4.1
 
 # pnpm
-pnpm add @jit-viewer/core</code></pre>
+pnpm add jit-viewer@1.4.1</code></pre>
         </div>
         
         <h3>依赖说明</h3>
@@ -658,8 +911,8 @@ pnpm add @jit-viewer/core</code></pre>
         <div class="code-block">
           <span class="code-label">html</span>
           <pre><code class="language-html">&lt;!-- 引入 SDK 样式和脚本 --&gt;
-&lt;link rel="stylesheet" href="jit-viewer.min.css"&gt;
-&lt;script src="jit-viewer.min.js"&gt;&lt;/script&gt;
+&lt;link rel="stylesheet" href="https://unpkg.com/jit-viewer@1.4.1/dist/iife/jit-viewer.min.css"&gt;
+&lt;script src="https://unpkg.com/jit-viewer@1.4.1/dist/iife/jit-viewer.min.js"&gt;&lt;/script&gt;
 
 &lt;!-- 创建预览容器 --&gt;
 &lt;div id="viewer"&gt;&lt;/div&gt;
@@ -686,11 +939,17 @@ pnpm add @jit-viewer/core</code></pre>
         <p>通过 npm 安装后在 Vue 组件中使用：</p>
         <div class="code-block">
           <span class="code-label">vue</span>
-          <pre><code class="language-javascript">import { Viewer } from '@jit-viewer/core'
-import '@jit-viewer/core/dist/style.css'
+          <pre><code class="language-javascript">import { createViewer } from 'jit-viewer'
+import 'jit-viewer/style.css'
 
-// 在模板中使用
-&lt;Viewer :file="fileUrl" :toolbar="true" /&gt;</code></pre>
+const viewer = createViewer({
+  target: '#viewer',
+  file: '/demo/test.pdf',
+  toolbar: true,
+  height: 600
+})
+
+viewer.mount()</code></pre>
         </div>
       </div>
     </section>
@@ -804,6 +1063,7 @@ const viewer = JitViewer.createViewer({
   width: '100%',
   height: '600px',
   cad: undefined,            // 可选：CAD 预览配置
+  model3d: undefined,        // 可选：3D 模型预览配置
   onReady: () => console.log('准备就绪'),
   onLoad: () => console.log('加载完成'),
   onError: (err) => console.error('错误:', err)
@@ -818,9 +1078,13 @@ viewer.rotate(90)       // 设置旋转角度
 viewer.fullscreen(true) // 切换全屏
 viewer.print()          // 打印文档
 viewer.download()       // 下载文档
+viewer.resetModel3DCamera() // 重置 3D 视角
+viewer.setModel3DAutoRotate(true) // 控制 3D 自动旋转
+viewer.toggleModel3DWireframe() // 切换 3D 线框
 viewer.destroy()        // 销毁实例</code></pre>
         </div>
         <p>CAD 说明：<code>DXF</code> 可直接预览，<code>DWG / DWF</code> 建议通过 <code>cad.previewUrl</code> 或 <code>cad.adapter</code> 接入转换结果。</p>
+        <p>3D 说明：当前首批支持 <code>GLB / glTF / STL</code>，也可以通过 <code>model3d.previewUrl</code> 或 <code>model3d.adapter</code> 接入转换后的模型资源。</p>
         
         <h3>ViewerInstance 方法</h3>
         <table class="api-table">
@@ -913,9 +1177,12 @@ const defaultItems = [
       <div class="demo-container">
         <div class="demo-sidebar">
           <h3>选择文件</h3>
-          <input type="file" id="fileInput" accept=".docx,.xlsx,.xls,.csv,.tsv,.pdf,.pptx,.txt,.md,.ofd,.mp4,.webm,.ogg,.ogv,.mov,.dxf,.dwg,.dwf,.dwfx,.dwt">
+          <input type="file" id="fileInput" accept=".docx,.xlsx,.xls,.csv,.tsv,.pdf,.pptx,.txt,.md,.js,.ts,.jsx,.tsx,.css,.scss,.less,.cs,.java,.go,.py,.json,.yaml,.yml,.sql,.sh,.ofd,.mp4,.webm,.ogg,.ogv,.mov,.mp3,.wav,.flac,.aac,.m4a,.opus,.weba,.aiff,.dxf,.dwg,.dwf,.dwfx,.dwt,.glb,.gltf,.stl,.obj,.ply">
           <p style="font-size: 12px; color: var(--text-secondary); margin-top: 8px;">
             CAD 当前建议测试 <code>.dxf</code>。<code>.dwg/.dwf</code> 需要后端转换后再预览。
+          </p>
+          <p style="font-size: 12px; color: var(--text-secondary); margin-top: 8px;">
+            3D 当前首批支持 <code>.glb/.gltf/.stl</code>，其中本地上传场景建议优先测试 <code>.glb/.stl</code>。
           </p>
           
           <h3 style="margin-top: 24px;">或输入 URL</h3>
@@ -928,6 +1195,8 @@ const defaultItems = [
             <button onclick="loadDemo('docx')">📝 DOCX 示例</button>
             <button onclick="loadDemo('excel')">📊 Excel 示例</button>
             <button onclick="loadDemo('cad')">📐 CAD DXF 示例</button>
+            <button onclick="loadDemo('model3d')">🧊 3D STL 示例</button>
+            <button onclick="loadDemo('model3dgltf')">🔺 3D glTF 示例</button>
           </div>
 
           <div class="video-config-panel" id="videoConfigPanel">
@@ -977,11 +1246,328 @@ const defaultItems = [
               当前没有视频文件。你现在修改的开关会在下次打开视频文件时生效。
             </div>
           </div>
+
+          <!-- Audio debug panel -->
+          <div class="video-config-panel" id="audioConfigPanel" style="display:none">
+            <div class="video-config-panel__title">
+              <h3 style="margin: 0;">音频调试面板</h3>
+              <span class="video-config-panel__badge" id="audioConfigBadge">等待音频</span>
+            </div>
+            <p class="video-config-panel__desc">
+              音频文件专属调试面板。支持切换可视化模式、自定义主题色和调整 FFT 精度，修改后点击"重建"立即生效。
+            </p>
+            <div class="video-config-panel__group">
+              <div class="model3d-config-select">
+                <label for="audioVisualizerSelect">可视化模式</label>
+                <select id="audioVisualizerSelect">
+                  <option value="bars">频谱柱状图 (bars)</option>
+                  <option value="wave">时域波形 (wave)</option>
+                </select>
+              </div>
+              <div class="model3d-config-select">
+                <label for="audioFftSelect">FFT 帧大小</label>
+                <select id="audioFftSelect">
+                  <option value="512">512（低精度，流畅）</option>
+                  <option value="1024">1024</option>
+                  <option value="2048" selected>2048（默认）</option>
+                  <option value="4096">4096（高精度）</option>
+                  <option value="8192">8192（超高精度）</option>
+                </select>
+              </div>
+              <div class="model3d-config-select">
+                <label for="audioColorInput">自定义主题色</label>
+                <input type="color" id="audioColorInput" value="#6366f1" style="width:60px;height:32px;border:none;cursor:pointer;background:none">
+                <button onclick="clearAudioColor()" style="margin-left:6px;font-size:12px">重置</button>
+              </div>
+              <label class="video-config-toggle">
+                <input type="checkbox" id="toggleAudioLoop">
+                <span class="video-config-toggle__content">
+                  <span class="video-config-toggle__label">循环播放</span>
+                  <span class="video-config-toggle__hint">初始化时是否开启循环。</span>
+                </span>
+              </label>
+              <label class="video-config-toggle">
+                <input type="checkbox" id="toggleAudioAutoplay">
+                <span class="video-config-toggle__content">
+                  <span class="video-config-toggle__label">自动播放</span>
+                  <span class="video-config-toggle__hint">浏览器通常会拦截无用户交互的自动播放。</span>
+                </span>
+              </label>
+            </div>
+            <div class="video-config-panel__status" id="audioConfigStatus">
+              当前没有音频文件。修改的配置会在下次打开音频文件时生效。
+            </div>
+          </div>
+
+          <div class="model3d-config-panel" id="model3dConfigPanel">
+            <div class="model3d-config-panel__title">
+              <h3 style="margin: 0;">3D 调试面板</h3>
+              <span class="model3d-config-panel__badge" id="model3dConfigBadge">等待 3D</span>            </div>
+            <p class="model3d-config-panel__desc">
+              这里可以同时验证 3D 的初始化配置和运行时控制。当前正在预览 3D 时，参数会直接走 SDK 的运行时 API；如果当前不是 3D 文件，这些配置会保留到下次打开模型时生效。
+            </p>
+
+            <div class="model3d-config-panel__group">
+              <div class="model3d-config-row">
+                <label class="model3d-config-toggle">
+                  <input type="checkbox" id="toggleModel3DAutoRotate" checked>
+                  <span class="model3d-config-toggle__content">
+                    <span class="model3d-config-toggle__label">默认自动旋转</span>
+                    <span class="model3d-config-toggle__hint">用于验证初始 autoRotate 和运行时切换。</span>
+                  </span>
+                </label>
+
+                <label class="model3d-config-toggle">
+                  <input type="checkbox" id="toggleModel3DWireframe">
+                  <span class="model3d-config-toggle__content">
+                    <span class="model3d-config-toggle__label">默认线框模式</span>
+                    <span class="model3d-config-toggle__hint">重建预览时以线框模式加载模型。</span>
+                  </span>
+                </label>
+              </div>
+
+              <div class="model3d-config-row">
+                <label class="model3d-config-toggle">
+                  <input type="checkbox" id="toggleModel3DGrid" checked>
+                  <span class="model3d-config-toggle__content">
+                    <span class="model3d-config-toggle__label">显示网格</span>
+                    <span class="model3d-config-toggle__hint">便于观察尺寸、地平面和镜头定位。</span>
+                  </span>
+                </label>
+
+                <label class="model3d-config-toggle">
+                  <input type="checkbox" id="toggleModel3DAxes" checked>
+                  <span class="model3d-config-toggle__content">
+                    <span class="model3d-config-toggle__label">显示坐标轴</span>
+                    <span class="model3d-config-toggle__hint">便于验证空间方向与旋转行为。</span>
+                  </span>
+                </label>
+              </div>
+
+              <div class="model3d-config-select">
+                <label for="model3dEnvironmentSelect">环境预设</label>
+                <select id="model3dEnvironmentSelect">
+                  <option value="studio">Studio</option>
+                  <option value="neutral">Neutral</option>
+                  <option value="sunset">Sunset</option>
+                  <option value="night">Night</option>
+                  <option value="none">None</option>
+                </select>
+              </div>
+
+              <div class="model3d-config-select">
+                <label for="model3dBackgroundSelect">背景色预设</label>
+                <select id="model3dBackgroundSelect">
+                  <option value="#0f172a">深色工作台</option>
+                  <option value="#ffffff">纯白画布</option>
+                  <option value="#e0f2fe">浅蓝检查视图</option>
+                  <option value="#f8fafc">中性灰背景</option>
+                </select>
+              </div>
+
+              <div class="model3d-config-row">
+                <div class="model3d-config-slider">
+                  <div class="model3d-config-slider__top">
+                    <label for="model3dExposureRange">曝光</label>
+                    <span class="model3d-config-slider__value" id="model3dExposureValue">1.0</span>
+                  </div>
+                  <input type="range" id="model3dExposureRange" min="0.1" max="3" step="0.1" value="1">
+                  <span class="model3d-config-slider__hint">用于观察暗场、亮面和高光细节的变化。</span>
+                </div>
+
+                <div class="model3d-config-slider">
+                  <div class="model3d-config-slider__top">
+                    <label for="model3dRotateSpeedRange">旋转速度</label>
+                    <span class="model3d-config-slider__value" id="model3dRotateSpeedValue">1.2</span>
+                  </div>
+                  <input type="range" id="model3dRotateSpeedRange" min="0" max="6" step="0.1" value="1.2">
+                  <span class="model3d-config-slider__hint">配合自动旋转查看模型轮廓和动画节奏。</span>
+                </div>
+              </div>
+
+              <div class="model3d-config-row">
+                <div class="model3d-config-slider">
+                  <div class="model3d-config-slider__top">
+                    <label for="model3dLightIntensityRange">光照强度</label>
+                    <span class="model3d-config-slider__value" id="model3dLightIntensityValue">1.0</span>
+                  </div>
+                  <input type="range" id="model3dLightIntensityRange" min="0.1" max="3" step="0.1" value="1">
+                  <span class="model3d-config-slider__hint">整体提亮或压暗环境灯光，观察体块关系。</span>
+                </div>
+
+                <div class="model3d-config-slider">
+                  <div class="model3d-config-slider__top">
+                    <label for="model3dRoughnessRange">材质粗糙度</label>
+                    <span class="model3d-config-slider__value" id="model3dRoughnessValue">0.72</span>
+                  </div>
+                  <input type="range" id="model3dRoughnessRange" min="0" max="1" step="0.01" value="0.72">
+                  <span class="model3d-config-slider__hint">数值越高，表面越漫反射，越不锐利。</span>
+                </div>
+              </div>
+
+              <div class="model3d-config-row">
+                <div class="model3d-config-slider">
+                  <div class="model3d-config-slider__top">
+                    <label for="model3dMetalnessRange">材质金属度</label>
+                    <span class="model3d-config-slider__value" id="model3dMetalnessValue">0.08</span>
+                  </div>
+                  <input type="range" id="model3dMetalnessRange" min="0" max="1" step="0.01" value="0.08">
+                  <span class="model3d-config-slider__hint">数值越高，表面越接近金属反射表现。</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="model3d-config-actions">
+              <button class="demo-btn secondary" id="model3dResetCameraBtn" type="button">重置视角</button>
+              <button class="demo-btn secondary" id="model3dToggleRotateBtn" type="button">切换旋转</button>
+              <button class="demo-btn secondary" id="model3dToggleWireframeBtn" type="button">切换线框</button>
+              <button class="demo-btn secondary" id="model3dToggleAnimationBtn" type="button">切换动画</button>
+              <button class="demo-btn secondary" id="model3dScreenshotBtn" type="button">截图下载</button>
+            </div>
+
+            <div class="model3d-config-state">
+              <h4>当前 3D 状态</h4>
+              <div class="model3d-config-metrics">
+                <div class="model3d-config-metric">
+                  <span>格式</span>
+                  <strong id="model3dMetricFormat">-</strong>
+                </div>
+                <div class="model3d-config-metric">
+                  <span>就绪状态</span>
+                  <strong id="model3dMetricReady">-</strong>
+                </div>
+                <div class="model3d-config-metric">
+                  <span>网格数量</span>
+                  <strong id="model3dMetricMeshes">-</strong>
+                </div>
+                <div class="model3d-config-metric">
+                  <span>材质数量</span>
+                  <strong id="model3dMetricMaterials">-</strong>
+                </div>
+                <div class="model3d-config-metric">
+                  <span>动画数量</span>
+                  <strong id="model3dMetricAnimations">-</strong>
+                </div>
+                <div class="model3d-config-metric">
+                  <span>动画状态</span>
+                  <strong id="model3dMetricAnimationState">-</strong>
+                </div>
+                <div class="model3d-config-metric">
+                  <span>包围盒</span>
+                  <strong id="model3dMetricBounds">-</strong>
+                </div>
+                <div class="model3d-config-metric">
+                  <span>环境预设</span>
+                  <strong id="model3dMetricEnvironment">-</strong>
+                </div>
+                <div class="model3d-config-metric">
+                  <span>曝光</span>
+                  <strong id="model3dMetricExposure">-</strong>
+                </div>
+                <div class="model3d-config-metric">
+                  <span>光照强度</span>
+                  <strong id="model3dMetricLightIntensity">-</strong>
+                </div>
+                <div class="model3d-config-metric">
+                  <span>旋转速度</span>
+                  <strong id="model3dMetricRotateSpeed">-</strong>
+                </div>
+                <div class="model3d-config-metric">
+                  <span>粗糙度 / 金属度</span>
+                  <strong id="model3dMetricMaterial">-</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="model3d-preset-panel">
+              <h4>预设 JSON</h4>
+              <div class="model3d-config-select" style="margin-bottom: 12px;">
+                <label for="model3dBuiltInPresetSelect">内置预设库</label>
+                <select id="model3dBuiltInPresetSelect"></select>
+              </div>
+              <div class="model3d-preset-actions" style="margin-top: 0; margin-bottom: 12px;">
+                <button class="demo-btn secondary" id="model3dApplyBuiltInPresetBtn" type="button">应用内置预设</button>
+                <button class="demo-btn secondary" id="model3dLoadBuiltInPresetBtn" type="button">写入编辑器</button>
+              </div>
+              <textarea id="model3dPresetEditor" spellcheck="false" placeholder='{\n  "environment": "studio",\n  "exposure": 1,\n  "lightIntensity": 1,\n  "materialRoughness": 0.72,\n  "materialMetalness": 0.08\n}'></textarea>
+              <div class="model3d-preset-actions">
+                <button class="demo-btn secondary" id="model3dExportPresetBtn" type="button">生成当前预设</button>
+                <button class="demo-btn secondary" id="model3dApplyPresetBtn" type="button">应用预设</button>
+                <button class="demo-btn secondary" id="model3dSavePresetBtn" type="button">保存到本地</button>
+                <button class="demo-btn secondary" id="model3dLoadPresetBtn" type="button">读取本地预设</button>
+              </div>
+            </div>
+
+            <div class="model3d-config-panel__status" id="model3dConfigStatus">
+              当前没有 3D 文件。你现在调整的开关会在下次打开 3D 模型时自动生效。
+            </div>
+          </div>
           
           <div id="fileInfo" style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border); display: none;">
             <h3>文件信息</h3>
             <p style="font-size: 13px; margin: 8px 0;"><strong>文件名:</strong> <span id="fileName">-</span></p>
             <p style="font-size: 13px; margin: 8px 0;"><strong>类型:</strong> <span id="fileType">-</span></p>
+          </div>
+
+          <!-- 水印配置面板 -->
+          <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border);">
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:12px;">
+              <h3 style="font-size:14px; margin:0;">🔖 水印设置</h3>
+              <span id="watermarkBadge" style="display:inline-flex;align-items:center;padding:3px 8px;border-radius:999px;font-size:11px;font-weight:600;background:#e2e8f0;color:#6b7280;">未开启</span>
+            </div>
+
+            <!-- 类型切换 -->
+            <div style="display:flex; gap:8px; margin-bottom:12px;">
+              <button id="wmBtnText" onclick="setWatermarkType('text')" style="flex:1;padding:6px;border:1px solid var(--primary);border-radius:6px;background:var(--primary);color:white;font-size:12px;cursor:pointer;">文本</button>
+              <button id="wmBtnImage" onclick="setWatermarkType('image')" style="flex:1;padding:6px;border:1px solid var(--border);border-radius:6px;background:white;color:var(--text);font-size:12px;cursor:pointer;">图片</button>
+            </div>
+
+            <!-- 文本配置 -->
+            <div id="wmTextConfig">
+              <input id="wmContent" type="text" value="内部资料 严禁外传" placeholder="水印文字"
+                style="width:100%;padding:8px 10px;border:1px solid var(--border);border-radius:6px;font-size:13px;margin-bottom:8px;">
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px;">
+                <div>
+                  <label style="font-size:11px;color:var(--text-secondary);">颜色</label>
+                  <input id="wmColor" type="color" value="#cccccc" style="width:100%;height:32px;padding:2px;border:1px solid var(--border);border-radius:6px;cursor:pointer;">
+                </div>
+                <div>
+                  <label style="font-size:11px;color:var(--text-secondary);">字号: <span id="wmFontSizeVal">16</span>px</label>
+                  <input id="wmFontSize" type="range" min="10" max="36" value="16" style="width:100%;" oninput="document.getElementById('wmFontSizeVal').textContent=this.value">
+                </div>
+              </div>
+            </div>
+
+            <!-- 图片配置 -->
+            <div id="wmImageConfig" style="display:none;">
+              <input id="wmImageUrl" type="text" placeholder="图片 URL"
+                style="width:100%;padding:8px 10px;border:1px solid var(--border);border-radius:6px;font-size:13px;margin-bottom:8px;">
+            </div>
+
+            <!-- 公共配置 -->
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px;">
+              <div>
+                <label style="font-size:11px;color:var(--text-secondary);">透明度: <span id="wmOpacityVal">0.3</span></label>
+                <input id="wmOpacity" type="range" min="0.05" max="1" step="0.05" value="0.3" style="width:100%;" oninput="document.getElementById('wmOpacityVal').textContent=parseFloat(this.value).toFixed(2)">
+              </div>
+              <div>
+                <label style="font-size:11px;color:var(--text-secondary);">旋转: <span id="wmRotateVal">-30</span>°</label>
+                <input id="wmRotate" type="range" min="-90" max="90" value="-30" style="width:100%;" oninput="document.getElementById('wmRotateVal').textContent=this.value">
+              </div>
+              <div>
+                <label style="font-size:11px;color:var(--text-secondary);">横距: <span id="wmGapXVal">100</span>px</label>
+                <input id="wmGapX" type="range" min="30" max="300" value="100" style="width:100%;" oninput="document.getElementById('wmGapXVal').textContent=this.value">
+              </div>
+              <div>
+                <label style="font-size:11px;color:var(--text-secondary);">纵距: <span id="wmGapYVal">50</span>px</label>
+                <input id="wmGapY" type="range" min="20" max="200" value="50" style="width:100%;" oninput="document.getElementById('wmGapYVal').textContent=this.value">
+              </div>
+            </div>
+
+            <div style="display:flex;gap:8px;">
+              <button onclick="applyWatermark()" class="demo-btn" style="flex:1;margin:0;">应用水印</button>
+              <button onclick="removeWatermark()" class="demo-btn secondary" style="flex:1;margin:0;">移除</button>
+            </div>
           </div>
         </div>
         
@@ -1038,14 +1624,14 @@ const defaultItems = [
         '/packages/core/dist/style.css',
         '../../packages/core/dist/iife/jit-viewer.min.css',
         '/packages/core/dist/iife/jit-viewer.min.css',
-        'https://unpkg.com/jit-viewer/dist/iife/jit-viewer.min.css'
+        'https://unpkg.com/jit-viewer@1.4.1/dist/iife/jit-viewer.min.css'
       ],
       module: [
         '../../packages/core/dist/index.js',
         '/packages/core/dist/index.js'
       ],
       script: [
-        'https://unpkg.com/jit-viewer/dist/iife/jit-viewer.min.js'
+        'https://unpkg.com/jit-viewer@1.4.1/dist/iife/jit-viewer.min.js'
       ]
     };
 
@@ -1184,10 +1770,13 @@ const defaultItems = [
       pdf: 'https://mozilla.github.io/pdf.js/web/compressed.tracemonkey-pldi-09.pdf',
       docx: 'https://calibre-ebook.com/downloads/demos/demo.docx',
       excel: 'https://go.microsoft.com/fwlink/?LinkID=521962',
-      cad: './samples/cad-floorplan.dxf'
+      cad: './samples/cad-floorplan.dxf',
+      model3d: './samples/model-cube.stl',
+      model3dgltf: './samples/model-triangle.gltf'
     };
 
     const videoExtensions = new Set(['mp4', 'webm', 'ogg', 'ogv', 'mov']);
+    const model3dExtensions = new Set(['glb', 'gltf', 'stl', 'obj', 'ply']);
     const currentDemoFile = {
       source: null,
       filename: '',
@@ -1198,6 +1787,116 @@ const defaultItems = [
       customControls: true,
       toolbarVideoControls: true,
       disableSeek: false
+    };
+    const demoModel3DConfig = {
+      autoRotate: true,
+      autoRotateSpeed: 1.2,
+      showGrid: true,
+      showAxes: true,
+      wireframe: false,
+      backgroundColor: '#0f172a',
+      environment: 'studio',
+      exposure: 1,
+      lightIntensity: 1,
+      materialRoughness: 0.72,
+      materialMetalness: 0.08
+    };
+    const model3dPresetStorageKey = 'jit-viewer:model3d-preset';
+    const fallbackModel3DBuiltInPresets = [
+      {
+        id: 'product-showcase',
+        name: '产品展台',
+        description: '偏产品展示的冷调展台，适合金属和硬表面模型。',
+        preset: {
+          autoRotate: true,
+          autoRotateSpeed: 1.4,
+          wireframe: false,
+          showGrid: false,
+          showAxes: false,
+          background: '#0f172a',
+          environment: 'studio',
+          exposure: 1.15,
+          lightIntensity: 1.2,
+          materialRoughness: 0.32,
+          materialMetalness: 0.46
+        }
+      },
+      {
+        id: 'white-model-review',
+        name: '白模审阅',
+        description: '更接近设计评审的白模视图，轮廓和体块更清晰。',
+        preset: {
+          autoRotate: false,
+          autoRotateSpeed: 1,
+          wireframe: false,
+          showGrid: true,
+          showAxes: true,
+          background: '#f8fafc',
+          environment: 'neutral',
+          exposure: 1.05,
+          lightIntensity: 0.95,
+          materialRoughness: 0.88,
+          materialMetalness: 0
+        }
+      },
+      {
+        id: 'night-outline',
+        name: '夜景轮廓',
+        description: '低照度夜景风格，适合观察轮廓线和高光边缘。',
+        preset: {
+          autoRotate: true,
+          autoRotateSpeed: 0.9,
+          wireframe: false,
+          showGrid: false,
+          showAxes: false,
+          background: '#020617',
+          environment: 'night',
+          exposure: 0.82,
+          lightIntensity: 0.72,
+          materialRoughness: 0.4,
+          materialMetalness: 0.22
+        }
+      },
+      {
+        id: 'warm-gallery',
+        name: '暖光陈列',
+        description: '偏暖色的陈列视图，适合概念展示和柔和观感。',
+        preset: {
+          autoRotate: true,
+          autoRotateSpeed: 1.1,
+          wireframe: false,
+          showGrid: false,
+          showAxes: false,
+          background: '#1f2937',
+          environment: 'sunset',
+          exposure: 1.08,
+          lightIntensity: 1.18,
+          materialRoughness: 0.52,
+          materialMetalness: 0.18
+        }
+      }
+    ];
+    const currentModel3DState = {
+      ready: false,
+      loading: false,
+      format: null,
+      meshCount: 0,
+      materialCount: 0,
+      animationCount: 0,
+      hasTexture: false,
+      boundingBox: null,
+      animationPlaying: false,
+      autoRotate: false,
+      autoRotateSpeed: 1.2,
+      wireframe: false,
+      showGrid: true,
+      showAxes: true,
+      exposure: 1,
+      lightIntensity: 1,
+      materialRoughness: 0.72,
+      materialMetalness: 0.08,
+      background: '#0f172a',
+      environment: 'studio'
     };
     
     let currentViewer = null;
@@ -1219,6 +1918,24 @@ const defaultItems = [
       }
 
       return normalizedType === 'video' || videoExtensions.has(normalizedType) || videoExtensions.has(extension);
+    }
+
+    function isModel3DType(type, filename) {
+      const normalizedType = (type || '').toLowerCase();
+      const extension = getFilenameExtension(filename);
+      if (normalizedType.startsWith('model/')) {
+        return true;
+      }
+
+      return normalizedType === 'model3d' || model3dExtensions.has(normalizedType) || model3dExtensions.has(extension);
+    }
+
+    const audioExtensions = new Set(['mp3','wav','flac','aac','ogg','m4a','opus','weba','aiff','aif']);
+    function isAudioType(type, filename) {
+      const normalizedType = (type || '').toLowerCase();
+      const extension = getFilenameExtension(filename);
+      if (normalizedType.startsWith('audio/')) return true;
+      return normalizedType === 'audio' || audioExtensions.has(normalizedType) || audioExtensions.has(extension);
     }
 
     function getVideoConfigElements() {
@@ -1263,6 +1980,417 @@ const defaultItems = [
           : '原生控件已关闭。';
 
         status.textContent = `${nativeState}${toolbarState}`;
+      }
+    }
+
+    function updateAudioConfigPanel() {
+      const panel = document.getElementById('audioConfigPanel');
+      const badge = document.getElementById('audioConfigBadge');
+      const status = document.getElementById('audioConfigStatus');
+      const isCurrentAudio = isAudioType(currentDemoFile.type, currentDemoFile.filename);
+
+      if (panel) panel.style.display = isCurrentAudio ? '' : 'none';
+
+      if (badge) {
+        badge.textContent = isCurrentAudio ? '音频已激活' : '等待音频';
+        badge.classList.toggle('is-active', isCurrentAudio);
+      }
+
+      if (status && !isCurrentAudio) {
+        status.textContent = '当前没有音频文件。修改的配置会在下次打开音频文件时生效。';
+      }
+    }
+
+    function clearAudioColor() {
+      document.getElementById('audioColorInput').value = '#6366f1';
+    }
+
+    function getModel3DConfigElements() {
+      return {
+        badge: document.getElementById('model3dConfigBadge'),
+        status: document.getElementById('model3dConfigStatus'),
+        metricFormat: document.getElementById('model3dMetricFormat'),
+        metricReady: document.getElementById('model3dMetricReady'),
+        metricMeshes: document.getElementById('model3dMetricMeshes'),
+        metricMaterials: document.getElementById('model3dMetricMaterials'),
+        metricAnimations: document.getElementById('model3dMetricAnimations'),
+        metricAnimationState: document.getElementById('model3dMetricAnimationState'),
+        metricBounds: document.getElementById('model3dMetricBounds'),
+        metricEnvironment: document.getElementById('model3dMetricEnvironment'),
+        metricExposure: document.getElementById('model3dMetricExposure'),
+        metricLightIntensity: document.getElementById('model3dMetricLightIntensity'),
+        metricRotateSpeed: document.getElementById('model3dMetricRotateSpeed'),
+        metricMaterial: document.getElementById('model3dMetricMaterial')
+      };
+    }
+
+    function formatBoundingBox(bounds) {
+      if (!bounds) {
+        return '-';
+      }
+
+      return `${Number(bounds.width || 0).toFixed(2)} × ${Number(bounds.height || 0).toFixed(2)} × ${Number(bounds.depth || 0).toFixed(2)}`;
+    }
+
+    function formatConfigNumber(value, fallback = '-') {
+      if (!Number.isFinite(value)) {
+        return fallback;
+      }
+
+      return Number(value).toFixed(2);
+    }
+
+    function getModel3DPresetEditor() {
+      return document.getElementById('model3dPresetEditor');
+    }
+
+    function getModel3DBuiltInPresetLibrary() {
+      if (currentViewer?.getBuiltInModel3DPresets) {
+        const presets = currentViewer.getBuiltInModel3DPresets();
+        if (Array.isArray(presets) && presets.length > 0) {
+          return presets;
+        }
+      }
+
+      return fallbackModel3DBuiltInPresets;
+    }
+
+    function getSelectedBuiltInModel3DPreset() {
+      const select = document.getElementById('model3dBuiltInPresetSelect');
+      if (!select) {
+        return null;
+      }
+
+      const presets = getModel3DBuiltInPresetLibrary();
+      return presets.find((item) => item.id === select.value) || presets[0] || null;
+    }
+
+    function populateModel3DBuiltInPresetSelect() {
+      const select = document.getElementById('model3dBuiltInPresetSelect');
+      if (!select) {
+        return;
+      }
+
+      const presets = getModel3DBuiltInPresetLibrary();
+      const currentValue = select.value;
+      select.innerHTML = presets.map((item) => (
+        `<option value="${item.id}">${item.name} · ${item.description}</option>`
+      )).join('');
+
+      if (presets.some((item) => item.id === currentValue)) {
+        select.value = currentValue;
+        return;
+      }
+
+      if (presets[0]) {
+        select.value = presets[0].id;
+      }
+    }
+
+    function buildModel3DPresetFromConfig() {
+      return {
+        autoRotate: Boolean(demoModel3DConfig.autoRotate),
+        autoRotateSpeed: Number(demoModel3DConfig.autoRotateSpeed),
+        wireframe: Boolean(demoModel3DConfig.wireframe),
+        showGrid: Boolean(demoModel3DConfig.showGrid),
+        showAxes: Boolean(demoModel3DConfig.showAxes),
+        background: String(demoModel3DConfig.backgroundColor),
+        environment: String(demoModel3DConfig.environment),
+        exposure: Number(demoModel3DConfig.exposure),
+        lightIntensity: Number(demoModel3DConfig.lightIntensity),
+        materialRoughness: Number(demoModel3DConfig.materialRoughness),
+        materialMetalness: Number(demoModel3DConfig.materialMetalness)
+      };
+    }
+
+    function writeModel3DPresetEditor(preset) {
+      const editor = getModel3DPresetEditor();
+      if (!editor) {
+        return;
+      }
+
+      editor.value = JSON.stringify(preset, null, 2);
+    }
+
+    function readModel3DPresetEditor() {
+      const editor = getModel3DPresetEditor();
+      if (!editor) {
+        return null;
+      }
+
+      const value = editor.value.trim();
+      if (!value) {
+        return null;
+      }
+
+      return JSON.parse(value);
+    }
+
+    function mergeModel3DPresetIntoConfig(preset) {
+      if (!preset || typeof preset !== 'object') {
+        return;
+      }
+
+      if (typeof preset.autoRotate === 'boolean') {
+        demoModel3DConfig.autoRotate = preset.autoRotate;
+      }
+      if (Number.isFinite(preset.autoRotateSpeed)) {
+        demoModel3DConfig.autoRotateSpeed = Number(preset.autoRotateSpeed);
+      }
+      if (typeof preset.wireframe === 'boolean') {
+        demoModel3DConfig.wireframe = preset.wireframe;
+      }
+      if (typeof preset.showGrid === 'boolean') {
+        demoModel3DConfig.showGrid = preset.showGrid;
+      }
+      if (typeof preset.showAxes === 'boolean') {
+        demoModel3DConfig.showAxes = preset.showAxes;
+      }
+      if (typeof preset.background === 'string' && preset.background) {
+        demoModel3DConfig.backgroundColor = preset.background;
+      }
+      if (typeof preset.environment === 'string' && preset.environment) {
+        demoModel3DConfig.environment = preset.environment;
+      }
+      if (Number.isFinite(preset.exposure)) {
+        demoModel3DConfig.exposure = Number(preset.exposure);
+      }
+      if (Number.isFinite(preset.lightIntensity)) {
+        demoModel3DConfig.lightIntensity = Number(preset.lightIntensity);
+      }
+      if (preset.materialRoughness === null || Number.isFinite(preset.materialRoughness)) {
+        demoModel3DConfig.materialRoughness = preset.materialRoughness === null ? 0.72 : Number(preset.materialRoughness);
+      }
+      if (preset.materialMetalness === null || Number.isFinite(preset.materialMetalness)) {
+        demoModel3DConfig.materialMetalness = preset.materialMetalness === null ? 0.08 : Number(preset.materialMetalness);
+      }
+    }
+
+    function syncModel3DState(state) {
+      if (!state || typeof state !== 'object') {
+        currentModel3DState.ready = false;
+        currentModel3DState.loading = false;
+        currentModel3DState.format = null;
+        currentModel3DState.meshCount = 0;
+        currentModel3DState.materialCount = 0;
+        currentModel3DState.animationCount = 0;
+        currentModel3DState.hasTexture = false;
+        currentModel3DState.boundingBox = null;
+        currentModel3DState.animationPlaying = false;
+        currentModel3DState.autoRotate = demoModel3DConfig.autoRotate;
+        currentModel3DState.autoRotateSpeed = demoModel3DConfig.autoRotateSpeed;
+        currentModel3DState.wireframe = demoModel3DConfig.wireframe;
+        currentModel3DState.showGrid = demoModel3DConfig.showGrid;
+        currentModel3DState.showAxes = demoModel3DConfig.showAxes;
+        currentModel3DState.exposure = demoModel3DConfig.exposure;
+        currentModel3DState.lightIntensity = demoModel3DConfig.lightIntensity;
+        currentModel3DState.materialRoughness = demoModel3DConfig.materialRoughness;
+        currentModel3DState.materialMetalness = demoModel3DConfig.materialMetalness;
+        currentModel3DState.background = demoModel3DConfig.backgroundColor;
+        currentModel3DState.environment = demoModel3DConfig.environment;
+      } else {
+        Object.assign(currentModel3DState, state);
+        demoModel3DConfig.autoRotate = Boolean(state.autoRotate);
+        demoModel3DConfig.autoRotateSpeed = Number(state.autoRotateSpeed ?? demoModel3DConfig.autoRotateSpeed);
+        demoModel3DConfig.wireframe = Boolean(state.wireframe);
+        demoModel3DConfig.showGrid = Boolean(state.showGrid);
+        demoModel3DConfig.showAxes = Boolean(state.showAxes);
+        demoModel3DConfig.exposure = Number(state.exposure ?? demoModel3DConfig.exposure);
+        demoModel3DConfig.lightIntensity = Number(state.lightIntensity ?? demoModel3DConfig.lightIntensity);
+        demoModel3DConfig.materialRoughness = Number(state.materialRoughness ?? demoModel3DConfig.materialRoughness);
+        demoModel3DConfig.materialMetalness = Number(state.materialMetalness ?? demoModel3DConfig.materialMetalness);
+        demoModel3DConfig.environment = String(state.environment || demoModel3DConfig.environment);
+        if (['#0f172a', '#ffffff', '#e0f2fe', '#f8fafc'].includes(String(state.background || ''))) {
+          demoModel3DConfig.backgroundColor = String(state.background);
+        }
+      }
+
+      updateModel3DConfigPanel();
+    }
+
+    function updateModel3DConfigPanel() {
+      const {
+        badge,
+        status,
+        metricFormat,
+        metricReady,
+        metricMeshes,
+        metricMaterials,
+        metricAnimations,
+        metricAnimationState,
+        metricBounds,
+        metricEnvironment,
+        metricExposure,
+        metricLightIntensity,
+        metricRotateSpeed,
+        metricMaterial
+      } = getModel3DConfigElements();
+      const isCurrentModel3D = isModel3DType(currentDemoFile.type, currentDemoFile.filename);
+      populateModel3DBuiltInPresetSelect();
+
+      if (badge) {
+        badge.textContent = isCurrentModel3D ? '3D 已激活' : '等待 3D';
+        badge.classList.toggle('is-active', isCurrentModel3D);
+      }
+
+      const autoRotateToggle = document.getElementById('toggleModel3DAutoRotate');
+      const wireframeToggle = document.getElementById('toggleModel3DWireframe');
+      const gridToggle = document.getElementById('toggleModel3DGrid');
+      const axesToggle = document.getElementById('toggleModel3DAxes');
+      const backgroundSelect = document.getElementById('model3dBackgroundSelect');
+      const environmentSelect = document.getElementById('model3dEnvironmentSelect');
+      const exposureRange = document.getElementById('model3dExposureRange');
+      const exposureValue = document.getElementById('model3dExposureValue');
+      const rotateSpeedRange = document.getElementById('model3dRotateSpeedRange');
+      const rotateSpeedValue = document.getElementById('model3dRotateSpeedValue');
+      const lightIntensityRange = document.getElementById('model3dLightIntensityRange');
+      const lightIntensityValue = document.getElementById('model3dLightIntensityValue');
+      const roughnessRange = document.getElementById('model3dRoughnessRange');
+      const roughnessValue = document.getElementById('model3dRoughnessValue');
+      const metalnessRange = document.getElementById('model3dMetalnessRange');
+      const metalnessValue = document.getElementById('model3dMetalnessValue');
+
+      if (autoRotateToggle) {
+        autoRotateToggle.checked = demoModel3DConfig.autoRotate;
+      }
+
+      if (wireframeToggle) {
+        wireframeToggle.checked = demoModel3DConfig.wireframe;
+      }
+
+      if (gridToggle) {
+        gridToggle.checked = demoModel3DConfig.showGrid;
+      }
+
+      if (axesToggle) {
+        axesToggle.checked = demoModel3DConfig.showAxes;
+      }
+
+      if (backgroundSelect) {
+        backgroundSelect.value = demoModel3DConfig.backgroundColor;
+      }
+
+      if (environmentSelect) {
+        environmentSelect.value = demoModel3DConfig.environment;
+      }
+
+      if (exposureRange) {
+        exposureRange.value = String(demoModel3DConfig.exposure);
+      }
+
+      if (exposureValue) {
+        exposureValue.textContent = formatConfigNumber(demoModel3DConfig.exposure);
+      }
+
+      if (rotateSpeedRange) {
+        rotateSpeedRange.value = String(demoModel3DConfig.autoRotateSpeed);
+      }
+
+      if (rotateSpeedValue) {
+        rotateSpeedValue.textContent = formatConfigNumber(demoModel3DConfig.autoRotateSpeed);
+      }
+
+      if (lightIntensityRange) {
+        lightIntensityRange.value = String(demoModel3DConfig.lightIntensity);
+      }
+
+      if (lightIntensityValue) {
+        lightIntensityValue.textContent = formatConfigNumber(demoModel3DConfig.lightIntensity);
+      }
+
+      if (roughnessRange) {
+        roughnessRange.value = String(demoModel3DConfig.materialRoughness);
+      }
+
+      if (roughnessValue) {
+        roughnessValue.textContent = formatConfigNumber(demoModel3DConfig.materialRoughness);
+      }
+
+      if (metalnessRange) {
+        metalnessRange.value = String(demoModel3DConfig.materialMetalness);
+      }
+
+      if (metalnessValue) {
+        metalnessValue.textContent = formatConfigNumber(demoModel3DConfig.materialMetalness);
+      }
+
+      if (metricFormat) {
+        metricFormat.textContent = currentModel3DState.format ? String(currentModel3DState.format).toUpperCase() : '-';
+      }
+
+      if (metricReady) {
+        metricReady.textContent = isCurrentModel3D
+          ? currentModel3DState.loading
+            ? '加载中'
+            : currentModel3DState.ready
+              ? '已就绪'
+              : '等待渲染'
+          : '-';
+      }
+
+      if (metricMeshes) {
+        metricMeshes.textContent = isCurrentModel3D ? String(currentModel3DState.meshCount ?? 0) : '-';
+      }
+
+      if (metricMaterials) {
+        metricMaterials.textContent = isCurrentModel3D ? String(currentModel3DState.materialCount ?? 0) : '-';
+      }
+
+      if (metricAnimations) {
+        metricAnimations.textContent = isCurrentModel3D ? String(currentModel3DState.animationCount ?? 0) : '-';
+      }
+
+      if (metricAnimationState) {
+        metricAnimationState.textContent = isCurrentModel3D
+          ? currentModel3DState.animationCount > 0
+            ? currentModel3DState.animationPlaying
+              ? '播放中'
+              : '已暂停'
+            : '无动画'
+          : '-';
+      }
+
+      if (metricBounds) {
+        metricBounds.textContent = isCurrentModel3D ? formatBoundingBox(currentModel3DState.boundingBox) : '-';
+      }
+
+      if (metricEnvironment) {
+        metricEnvironment.textContent = isCurrentModel3D
+          ? String(currentModel3DState.environment || demoModel3DConfig.environment)
+          : '-';
+      }
+
+      if (metricExposure) {
+        metricExposure.textContent = isCurrentModel3D ? formatConfigNumber(currentModel3DState.exposure) : '-';
+      }
+
+      if (metricLightIntensity) {
+        metricLightIntensity.textContent = isCurrentModel3D ? formatConfigNumber(currentModel3DState.lightIntensity) : '-';
+      }
+
+      if (metricRotateSpeed) {
+        metricRotateSpeed.textContent = isCurrentModel3D ? formatConfigNumber(currentModel3DState.autoRotateSpeed) : '-';
+      }
+
+      if (metricMaterial) {
+        metricMaterial.textContent = isCurrentModel3D
+          ? `${formatConfigNumber(currentModel3DState.materialRoughness)} / ${formatConfigNumber(currentModel3DState.materialMetalness)}`
+          : '-';
+      }
+
+      if (status) {
+        if (!isCurrentModel3D) {
+          status.textContent = '当前没有 3D 文件。你现在调整的开关会在下次打开 3D 模型时自动生效。';
+          return;
+        }
+
+        const rotateState = currentModel3DState.autoRotate ? '自动旋转已开启。' : '自动旋转已关闭。';
+        const wireframeState = currentModel3DState.wireframe ? '线框模式已开启。' : '线框模式已关闭。';
+        const helperState = `网格${currentModel3DState.showGrid ? '已开启' : '已关闭'}，坐标轴${currentModel3DState.showAxes ? '已开启' : '已关闭'}。`;
+        const textureState = currentModel3DState.hasTexture ? '模型包含贴图。' : '模型未携带贴图或贴图未启用。';
+        const environmentState = `当前环境：${currentModel3DState.environment || demoModel3DConfig.environment}。`;
+        const tuningState = `曝光 ${formatConfigNumber(currentModel3DState.exposure)}，光照 ${formatConfigNumber(currentModel3DState.lightIntensity)}，旋转速度 ${formatConfigNumber(currentModel3DState.autoRotateSpeed)}。`;
+        status.textContent = `${rotateState}${wireframeState}${helperState}${textureState}${environmentState}${tuningState} 当前背景色：${currentModel3DState.background || demoModel3DConfig.backgroundColor}`;
       }
     }
 
@@ -1317,24 +2445,74 @@ const defaultItems = [
           customControls: demoVideoConfig.customControls,
           disableSeek: demoVideoConfig.disableSeek
         } : undefined,
+        audio: isAudioType(currentDemoFile.type, filename) ? {
+          visualizer: document.getElementById('audioVisualizerSelect')?.value || 'bars',
+          fftSize: parseInt(document.getElementById('audioFftSelect')?.value || '2048', 10),
+          color: document.getElementById('audioColorInput')?.value || undefined,
+          loop: document.getElementById('toggleAudioLoop')?.checked || false,
+          autoplay: document.getElementById('toggleAudioAutoplay')?.checked || false,
+        } : undefined,
+        model3d: isModel3DType(currentDemoFile.type, filename) ? {
+          autoRotate: demoModel3DConfig.autoRotate,
+          autoRotateSpeed: demoModel3DConfig.autoRotateSpeed,
+          showGrid: demoModel3DConfig.showGrid,
+          showAxes: demoModel3DConfig.showAxes,
+          wireframe: demoModel3DConfig.wireframe,
+          backgroundColor: demoModel3DConfig.backgroundColor,
+          environment: demoModel3DConfig.environment,
+          exposure: demoModel3DConfig.exposure,
+          lightIntensity: demoModel3DConfig.lightIntensity,
+          materialRoughness: demoModel3DConfig.materialRoughness,
+          materialMetalness: demoModel3DConfig.materialMetalness
+        } : undefined,
         onReady: () => console.log('Viewer ready'),
         onLoad: () => console.log('File loaded'),
         onError: (err) => console.error('Error:', err)
       });
+
+      currentViewer.on('model3d:loaded', (state) => {
+        syncModel3DState(state);
+      });
+
+      currentViewer.on('model3d:statechange', (state) => {
+        syncModel3DState(state);
+      });
+
+      currentViewer.on('model3d:animation-start', (state) => {
+        syncModel3DState(state);
+      });
+
+      currentViewer.on('model3d:animation-pause', (state) => {
+        syncModel3DState(state);
+      });
       
       await currentViewer.mount(container);
+
+      if (isModel3DType(currentDemoFile.type, filename)) {
+        syncModel3DState(currentViewer.getModel3DState());
+      } else {
+        syncModel3DState(null);
+      }
     }
     
     async function loadDemo(type) {
       const url = demoFiles[type];
       if (!url) return;
       
-      const filename = type === 'cad' ? 'cad-floorplan.dxf' : `示例.${type}`;
+      const filename = type === 'cad'
+        ? 'cad-floorplan.dxf'
+        : type === 'model3d'
+          ? 'model-cube.stl'
+          : type === 'model3dgltf'
+            ? 'model-triangle.gltf'
+          : `示例.${type}`;
       currentDemoFile.source = url;
       currentDemoFile.filename = filename;
       currentDemoFile.type = type;
       showFileInfo(`示例 ${type.toUpperCase()} 文件`, type);
       updateVideoConfigPanel();
+      updateAudioConfigPanel();
+      syncModel3DState(null);
       await initViewer(url, filename);
     }
     
@@ -1352,6 +2530,8 @@ const defaultItems = [
       currentDemoFile.type = ext;
       showFileInfo(filename, ext);
       updateVideoConfigPanel();
+      updateAudioConfigPanel();
+      syncModel3DState(null);
       
       await initViewer(url, filename);
     }
@@ -1366,6 +2546,8 @@ const defaultItems = [
       currentDemoFile.type = file.type || getFilenameExtension(file.name);
       showFileInfo(file.name, file.type || file.name.split('.').pop());
       updateVideoConfigPanel();
+      updateAudioConfigPanel();
+      syncModel3DState(null);
       
       await initViewer(file, file.name);
     });
@@ -1373,11 +2555,37 @@ const defaultItems = [
     async function reapplyCurrentViewerWithVideoConfig() {
       if (!currentDemoFile.source || !isVideoType(currentDemoFile.type, currentDemoFile.filename)) {
         updateVideoConfigPanel();
+      updateAudioConfigPanel();
         return;
       }
 
       updateVideoConfigPanel();
+      updateAudioConfigPanel();
       await initViewer(currentDemoFile.source, currentDemoFile.filename);
+    }
+
+    async function reapplyCurrentViewerWithModel3DConfig() {
+      if (!currentDemoFile.source || !isModel3DType(currentDemoFile.type, currentDemoFile.filename)) {
+        updateModel3DConfigPanel();
+        return;
+      }
+
+      syncModel3DState(null);
+      await initViewer(currentDemoFile.source, currentDemoFile.filename);
+    }
+
+    function isCurrentModel3DActive() {
+      return Boolean(currentViewer) && isModel3DType(currentDemoFile.type, currentDemoFile.filename);
+    }
+
+    function syncCurrentModel3DViewerState() {
+      if (!isCurrentModel3DActive()) {
+        updateModel3DConfigPanel();
+        return false;
+      }
+
+      syncModel3DState(currentViewer.getModel3DState());
+      return true;
     }
 
     document.getElementById('toggleNativeControls')?.addEventListener('change', async function(event) {
@@ -1400,7 +2608,328 @@ const defaultItems = [
       await reapplyCurrentViewerWithVideoConfig();
     });
 
+    document.getElementById('toggleModel3DAutoRotate')?.addEventListener('change', async function(event) {
+      demoModel3DConfig.autoRotate = event.target.checked;
+      if (isCurrentModel3DActive()) {
+        currentViewer.setModel3DAutoRotate(demoModel3DConfig.autoRotate);
+        syncCurrentModel3DViewerState();
+        return;
+      }
+      updateModel3DConfigPanel();
+    });
+
+    document.getElementById('toggleModel3DWireframe')?.addEventListener('change', async function(event) {
+      demoModel3DConfig.wireframe = event.target.checked;
+      if (isCurrentModel3DActive()) {
+        if (Boolean(currentModel3DState.wireframe) !== demoModel3DConfig.wireframe) {
+          currentViewer.toggleModel3DWireframe();
+        }
+        syncCurrentModel3DViewerState();
+        return;
+      }
+      updateModel3DConfigPanel();
+    });
+
+    document.getElementById('toggleModel3DGrid')?.addEventListener('change', async function(event) {
+      demoModel3DConfig.showGrid = event.target.checked;
+      if (isCurrentModel3DActive()) {
+        currentViewer.setModel3DGridVisible(demoModel3DConfig.showGrid);
+        syncCurrentModel3DViewerState();
+        return;
+      }
+      updateModel3DConfigPanel();
+    });
+
+    document.getElementById('toggleModel3DAxes')?.addEventListener('change', async function(event) {
+      demoModel3DConfig.showAxes = event.target.checked;
+      if (isCurrentModel3DActive()) {
+        currentViewer.setModel3DAxesVisible(demoModel3DConfig.showAxes);
+        syncCurrentModel3DViewerState();
+        return;
+      }
+      updateModel3DConfigPanel();
+    });
+
+    document.getElementById('model3dBackgroundSelect')?.addEventListener('change', async function(event) {
+      demoModel3DConfig.backgroundColor = event.target.value;
+      if (isCurrentModel3DActive()) {
+        currentViewer.setModel3DBackground(demoModel3DConfig.backgroundColor);
+        syncCurrentModel3DViewerState();
+        return;
+      }
+      updateModel3DConfigPanel();
+    });
+
+    document.getElementById('model3dEnvironmentSelect')?.addEventListener('change', async function(event) {
+      demoModel3DConfig.environment = event.target.value;
+      if (isCurrentModel3DActive()) {
+        currentViewer.setModel3DEnvironment(demoModel3DConfig.environment);
+        syncCurrentModel3DViewerState();
+        return;
+      }
+      updateModel3DConfigPanel();
+    });
+
+    document.getElementById('model3dExposureRange')?.addEventListener('input', function(event) {
+      demoModel3DConfig.exposure = Number(event.target.value);
+      if (isCurrentModel3DActive()) {
+        currentViewer.setModel3DExposure(demoModel3DConfig.exposure);
+        syncCurrentModel3DViewerState();
+        return;
+      }
+      updateModel3DConfigPanel();
+    });
+
+    document.getElementById('model3dRotateSpeedRange')?.addEventListener('input', function(event) {
+      demoModel3DConfig.autoRotateSpeed = Number(event.target.value);
+      if (isCurrentModel3DActive()) {
+        currentViewer.setModel3DAutoRotateSpeed(demoModel3DConfig.autoRotateSpeed);
+        syncCurrentModel3DViewerState();
+        return;
+      }
+      updateModel3DConfigPanel();
+    });
+
+    document.getElementById('model3dLightIntensityRange')?.addEventListener('input', function(event) {
+      demoModel3DConfig.lightIntensity = Number(event.target.value);
+      if (isCurrentModel3DActive()) {
+        currentViewer.setModel3DLightIntensity(demoModel3DConfig.lightIntensity);
+        syncCurrentModel3DViewerState();
+        return;
+      }
+      updateModel3DConfigPanel();
+    });
+
+    document.getElementById('model3dRoughnessRange')?.addEventListener('input', function(event) {
+      demoModel3DConfig.materialRoughness = Number(event.target.value);
+      if (isCurrentModel3DActive()) {
+        currentViewer.setModel3DMaterialRoughness(demoModel3DConfig.materialRoughness);
+        syncCurrentModel3DViewerState();
+        return;
+      }
+      updateModel3DConfigPanel();
+    });
+
+    document.getElementById('model3dMetalnessRange')?.addEventListener('input', function(event) {
+      demoModel3DConfig.materialMetalness = Number(event.target.value);
+      if (isCurrentModel3DActive()) {
+        currentViewer.setModel3DMaterialMetalness(demoModel3DConfig.materialMetalness);
+        syncCurrentModel3DViewerState();
+        return;
+      }
+      updateModel3DConfigPanel();
+    });
+
+    document.getElementById('model3dResetCameraBtn')?.addEventListener('click', function() {
+      if (!currentViewer || !isModel3DType(currentDemoFile.type, currentDemoFile.filename)) {
+        updateModel3DConfigPanel();
+        return;
+      }
+
+      currentViewer.resetModel3DCamera();
+      syncModel3DState(currentViewer.getModel3DState());
+    });
+
+    document.getElementById('model3dToggleRotateBtn')?.addEventListener('click', function() {
+      if (!currentViewer || !isModel3DType(currentDemoFile.type, currentDemoFile.filename)) {
+        updateModel3DConfigPanel();
+        return;
+      }
+
+      const nextEnabled = !Boolean(currentModel3DState.autoRotate);
+      currentViewer.setModel3DAutoRotate(nextEnabled);
+      syncModel3DState(currentViewer.getModel3DState());
+    });
+
+    document.getElementById('model3dToggleWireframeBtn')?.addEventListener('click', function() {
+      if (!currentViewer || !isModel3DType(currentDemoFile.type, currentDemoFile.filename)) {
+        updateModel3DConfigPanel();
+        return;
+      }
+
+      currentViewer.toggleModel3DWireframe();
+      syncModel3DState(currentViewer.getModel3DState());
+    });
+
+    document.getElementById('model3dToggleAnimationBtn')?.addEventListener('click', function() {
+      if (!currentViewer || !isModel3DType(currentDemoFile.type, currentDemoFile.filename)) {
+        updateModel3DConfigPanel();
+        return;
+      }
+
+      currentViewer.toggleModel3DAnimation();
+      syncModel3DState(currentViewer.getModel3DState());
+    });
+
+    document.getElementById('model3dScreenshotBtn')?.addEventListener('click', async function() {
+      if (!currentViewer || !isModel3DType(currentDemoFile.type, currentDemoFile.filename)) {
+        updateModel3DConfigPanel();
+        return;
+      }
+
+      const blob = await currentViewer.captureModel3DScreenshot();
+      if (!blob) {
+        return;
+      }
+
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = 'jit-viewer-model3d-screenshot.png';
+      link.click();
+      URL.revokeObjectURL(url);
+    });
+
+    document.getElementById('model3dExportPresetBtn')?.addEventListener('click', function() {
+      const preset = isCurrentModel3DActive() && currentViewer.getModel3DPreset
+        ? currentViewer.getModel3DPreset() || buildModel3DPresetFromConfig()
+        : buildModel3DPresetFromConfig();
+      writeModel3DPresetEditor(preset);
+      updateModel3DConfigPanel();
+    });
+
+    document.getElementById('model3dApplyBuiltInPresetBtn')?.addEventListener('click', function() {
+      const selected = getSelectedBuiltInModel3DPreset();
+      if (!selected) {
+        alert('当前没有可用的内置预设');
+        return;
+      }
+
+      mergeModel3DPresetIntoConfig(selected.preset);
+      writeModel3DPresetEditor(selected.preset);
+
+      if (isCurrentModel3DActive() && currentViewer.applyBuiltInModel3DPreset) {
+        currentViewer.applyBuiltInModel3DPreset(selected.id);
+        syncCurrentModel3DViewerState();
+        return;
+      }
+
+      updateModel3DConfigPanel();
+    });
+
+    document.getElementById('model3dLoadBuiltInPresetBtn')?.addEventListener('click', function() {
+      const selected = getSelectedBuiltInModel3DPreset();
+      if (!selected) {
+        alert('当前没有可用的内置预设');
+        return;
+      }
+
+      writeModel3DPresetEditor(selected.preset);
+      updateModel3DConfigPanel();
+    });
+
+    document.getElementById('model3dApplyPresetBtn')?.addEventListener('click', async function() {
+      try {
+        const preset = readModel3DPresetEditor();
+        if (!preset) {
+          alert('请先在预设 JSON 中输入有效内容');
+          return;
+        }
+
+        mergeModel3DPresetIntoConfig(preset);
+
+        if (isCurrentModel3DActive() && currentViewer.applyModel3DPreset) {
+          currentViewer.applyModel3DPreset(preset);
+          syncCurrentModel3DViewerState();
+          return;
+        }
+
+        updateModel3DConfigPanel();
+      } catch (error) {
+        alert(`预设 JSON 解析失败：${error.message || error}`);
+      }
+    });
+
+    document.getElementById('model3dSavePresetBtn')?.addEventListener('click', function() {
+      const preset = isCurrentModel3DActive() && currentViewer.getModel3DPreset
+        ? currentViewer.getModel3DPreset() || buildModel3DPresetFromConfig()
+        : buildModel3DPresetFromConfig();
+      writeModel3DPresetEditor(preset);
+      localStorage.setItem(model3dPresetStorageKey, JSON.stringify(preset));
+      updateModel3DConfigPanel();
+    });
+
+    document.getElementById('model3dLoadPresetBtn')?.addEventListener('click', async function() {
+      const raw = localStorage.getItem(model3dPresetStorageKey);
+      if (!raw) {
+        alert('当前没有已保存的本地 3D 预设');
+        return;
+      }
+
+      try {
+        const preset = JSON.parse(raw);
+        writeModel3DPresetEditor(preset);
+        mergeModel3DPresetIntoConfig(preset);
+
+        if (isCurrentModel3DActive() && currentViewer.applyModel3DPreset) {
+          currentViewer.applyModel3DPreset(preset);
+          syncCurrentModel3DViewerState();
+          return;
+        }
+
+        updateModel3DConfigPanel();
+      } catch (error) {
+        alert(`本地预设读取失败：${error.message || error}`);
+      }
+    });
+
     updateVideoConfigPanel();
+    updateModel3DConfigPanel();
+    writeModel3DPresetEditor(buildModel3DPresetFromConfig());
+
+    // ── 水印功能 ────────────────────────────────────────
+    let currentWatermarkType = 'text';
+
+    function setWatermarkType(type) {
+      currentWatermarkType = type;
+      const isText = type === 'text';
+      document.getElementById('wmBtnText').style.background = isText ? 'var(--primary)' : 'white';
+      document.getElementById('wmBtnText').style.color = isText ? 'white' : 'var(--text)';
+      document.getElementById('wmBtnText').style.borderColor = isText ? 'var(--primary)' : 'var(--border)';
+      document.getElementById('wmBtnImage').style.background = isText ? 'white' : 'var(--primary)';
+      document.getElementById('wmBtnImage').style.color = isText ? 'var(--text)' : 'white';
+      document.getElementById('wmBtnImage').style.borderColor = isText ? 'var(--border)' : 'var(--primary)';
+      document.getElementById('wmTextConfig').style.display = isText ? 'block' : 'none';
+      document.getElementById('wmImageConfig').style.display = isText ? 'none' : 'block';
+    }
+
+    function applyWatermark() {
+      if (!currentViewer) {
+        alert('请先加载一个文件');
+        return;
+      }
+      const config = {
+        type: currentWatermarkType,
+        opacity: parseFloat(document.getElementById('wmOpacity').value),
+        rotate: parseInt(document.getElementById('wmRotate').value),
+        gapX: parseInt(document.getElementById('wmGapX').value),
+        gapY: parseInt(document.getElementById('wmGapY').value)
+      };
+      if (currentWatermarkType === 'text') {
+        config.content = document.getElementById('wmContent').value || '水印';
+        config.fontSize = parseInt(document.getElementById('wmFontSize').value);
+        config.color = document.getElementById('wmColor').value;
+      } else {
+        config.image = document.getElementById('wmImageUrl').value;
+        config.imageWidth = 100;
+        config.imageHeight = 100;
+      }
+      currentViewer.setOptions({ watermark: config });
+      const badge = document.getElementById('watermarkBadge');
+      badge.textContent = '已开启';
+      badge.style.background = '#dcfce7';
+      badge.style.color = '#166534';
+    }
+
+    function removeWatermark() {
+      if (!currentViewer) return;
+      currentViewer.setOptions({ watermark: null });
+      const badge = document.getElementById('watermarkBadge');
+      badge.textContent = '未开启';
+      badge.style.background = '#e2e8f0';
+      badge.style.color = '#6b7280';
+    }
+    // ── 水印功能 end ─────────────────────────────────────
     
     // Add spin animation
     const style = document.createElement('style');
